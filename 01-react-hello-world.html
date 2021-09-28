@@ -5,6 +5,7 @@
 		<title>hello world</title>
 		<script src="react.development.js" type="text/javascript" charset="utf-8"></script>
 		<script src="react-dom.development.js" type="text/javascript" charset="utf-8"></script>
+		<!-- babel,es6转es5，jsx转js -->
 		<script src="babel.min.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
@@ -13,9 +14,29 @@
 		</div>
 	</body>
 	<script type="text/babel">
+		{
+			/*
+				大括号是js的开始和结束标志，这是js的注释方式
+			*/
+		}
+		//jsx语法，采用小驼峰的方式定义属性（eg:tabIndex）可以直接在js中写html标签，只能有一个根元素
+		//然后babel将html标签转换成对应的函数生成React元素
+		const name = "elena"
+		function userInfo(user){
+			return <p>{user.sex}</p>
+		}
+		const user = {
+			sex: 'girl'
+		}
+		const element = <h1 tabIndex="0" className="name">hello,{name},{userInfo(user)}</h1>
 		ReactDOM.render(
-			<h1>hello world</h1>,
+			element,
 			document.getElementById("app")
 		)
+		//函数创建标签的语法
+		// ReactDOM.render(
+		// 	React.createElement("h1","","hello"),
+		// 	document.getElementById("app")
+		// )
 	</script>
 </html>
