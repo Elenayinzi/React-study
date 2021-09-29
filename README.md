@@ -14,7 +14,7 @@
 #### 元素渲染，React元素是不可变的对象，更新UI的唯一方式是创建一个新的UI,然后render，但是我们只需要更改数据，这就是状态组件的出现
 #### 组件&props，组件类似于js的函数
 1.props是入参，只读性，不能修改自身的props
-2.函数组件，function test(props){retrun <h1></h1>},类似构造函数
+2.函数组件，function Test(props){retrun <h1></h1>},类似构造函数
 3.class组件, class Welcome extends React.Component { 
 	render() {
 		return <h1></h1>
