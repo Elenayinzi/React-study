@@ -33,6 +33,17 @@
 #### 事件处理
 1.采用小驼峰式命名事件
 2.使用JSX语法时需要传入一个函数作为事件处理函数，而不是一个字符串
+3.React不能通过 return false阻止默认行为，只能使用preventDefault()
+4.// 为了在回调中使用 `this`，这个绑定是必不可少的：this.handleClick = this.handleClick.bind(this);
+可以使用:
+public class fields: test = () => {} or 1.绑定了this;2.书写少了，不用在构造函数中bind；3.自动绑定，不用多次创建函数；
+箭头函数：()=>this.test();会出现重复创建函数的问题
+5.向事件处理程序传递参数
+#### 条件渲染
+1.元素变量
+2.与运算符&&：{arr.length >0 && <h1>aa</h1>}在 JavaScript 中，true && expression 总是会返回 expression, 而 false && expression 总是会返回false表达式，跳过expression
+3.三目运算符：{isLoggedIn ? 'currently' : 'not'}
+4.阻止组件渲染，返回null
 #### redux语法
 #### 生命周期: 构造函数，render, mount, unmount
 1.mount:挂载，组件第一次渲染到DOM中时，componentDidMount
