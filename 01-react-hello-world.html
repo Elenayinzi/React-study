@@ -28,11 +28,44 @@
 		const user = {
 			sex: 'girl'
 		}
-		const element = <h1 tabIndex="0" className="name">hello,{name},{userInfo(user)}</h1>
+		class Clock extends React.Component {
+			constructor(props) {
+				super(props)  //把props参数传给父类
+				this.state = {
+					date: new Date()
+				}
+			}
+			componentDidMount() {
+				this.timerID = setInterval( 
+					() => this.tick(),
+				1000)
+			}
+			componentWillUnmount() {
+				clearInterval(this.timerID)
+			}
+			tick() {
+				this.setState({
+					date: new Date()
+				})
+			}
+			render() {
+				return (
+					<div>
+						<h1>It is {this.state.date.toLocaleTimeString()}</h1>
+					</div>
+				)
+			}
+		}
+		function tick() {
+			//return <h2>It is { new Date().toLocaleTimeString()}.</h2>	
+			return <Clock date={new Date()}/>
+		}
+		const element = <h1 tabIndex="0" className="name">hello,{name},{userInfo(user),tick()}</h1>
 		ReactDOM.render(
 			element,
 			document.getElementById("app")
 		)
+		//setInterval(tick,1000)
 		//函数创建标签的语法
 		// ReactDOM.render(
 		// 	React.createElement("h1","","hello"),
