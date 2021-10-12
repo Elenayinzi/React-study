@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>水沸腾</title>
+		<script src="react.development.js" type="text/javascript" charset="utf-8"></script>
+		<script src="react-dom.development.js" type="text/javascript" charset="utf-8"></script>
+		<script src="babel.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			
+		</div>
+	</body>
+	<script type="text/babel">
+
+        function Boiling(props) {
+            if(props.celsius >= 100) {
+                return <h2>水已经沸腾了...</h2>
+            }else {
+                return <h2>水还没有沸腾...</h2>
+            }
+        }
+        const typeName = {
+            c:"摄氏温度",
+            f:"华氏温度"
+        }
+        function TemperatureInput(props) {
+            function onTemperatureChange(e) {
+                props.onTemperatureChange(e.target.value)
+            }
+            return (
+                <fieldset>
+                    <legend>请输入{typeName[props.type]}</legend>
+                    <input value={props.temperature} onChange={onTemperatureChange}/>
+                </fieldset>
+            )
+        }
+        class App extends React.Component{
+            constructor(props) {
+                super(props);
+                this.state = {
+                    temperature: 0,
+                    type: "c"
+                }
+            }
+            onCelsiousChange(val) {
+                this.setState({
+                    temperature: val,
+                    type:"c"
+                })
+            }
+            onFahrenheitChange(val){
+                this.setState({
+                    temperature: val,
+                    type:"f"
+                })
+            }
+            render() {
+                const { temperature, type} = this.state
+                let Cels,Fahr;
+                if(temperature == '') {
+                    Cels = Fahr = ''
+                } else if(type == 'c') {
+                    Cels = temperature
+                    Fahr = Cels * 1.8 + 32
+                } else {
+                    Fahr = temperature
+                    Cels = (Fahr - 32) / 1.8
+                }
+                return (
+                    <div>
+                       <TemperatureInput type="c" temperature={Cels} onTemperatureChange={this.onCelsiousChange.bind(this)}/> 
+                       <TemperatureInput type="f" temperature={Fahr} onTemperatureChange={this.onFahrenheitChange.bind(this)}/> 
+                       <Boiling celsius={101}/>
+                    </div>
+                )
+            }
+        }
+		ReactDOM.render(
+			<App/>,
+			document.getElementById("app")
+		)
+	</script>
+</html>
