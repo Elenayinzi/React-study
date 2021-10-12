@@ -51,6 +51,35 @@ public class fields: test = () => {} or 1.绑定了this;2.书写少了，不用�
 4.用key提取组件，元素的 key 只有放在就近的数组上下文中才有意义。
 5.在jsx中嵌入map()
 #### 表单
+1.受控组件:input,textarea,select
+2.非受控组件：文件input标签
+3.处理多个input输入时增加name属性来区分
+this.setState({
+  [name]: value
+});
+4.受控组件输入空值的情况
+5.什么是Formik：是由React组件和hooks组成，它内置了表单的state管理操作，无需我们在单独为表单建立state，同时使用了Context，能够让表单组件多层嵌套，不再需要我们一层层传递
+#### 状态提升 p9 58分钟
+1.
+#### 组合和继承 p10 25分钟
+1.
+#### react哲学 p11-p15 60分钟
+1.
+#### 小游戏开发 p16-p24 120分钟
+1.
+#### p25-p30 60分钟
+1.
+#### p30-p35 60分钟
+1.
+#### p36-p40 60分钟
+1.
+以上10/12号完成
+### p41-p60 350分钟
+以上10/13号完成
+### p61-p80 350分钟
+以上10/14号完成
+
+
 #### redux语法
 #### 生命周期: 构造函数，render, mount, unmount
 1.mount: 挂载，组件第一次渲染到DOM中时，componentDidMount
