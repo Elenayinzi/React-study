@@ -34,7 +34,7 @@
 1.采用小驼峰式命名事件
 2.使用JSX语法时需要传入一个函数作为事件处理函数，而不是一个字符串
 3.React不能通过 return false阻止默认行为，只能使用preventDefault()
-4.// 为了在回调中使用 `this`，这个绑定是必不可少的：this.handleClick = this.handleClick.bind(this);
+4.为了在回调中使用 `this`，这个绑定是必不可少的：this.handleClick = this.handleClick.bind(this);
 可以使用:
 public class fields: test = () => {} or 1.绑定了this;2.书写少了，不用在构造函数中bind；3.自动绑定，不用多次创建函数；
 箭头函数：()=>this.test();会出现重复创建函数的问题
