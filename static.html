@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>棋盘</title>
+        <style type="text/css">
+            *{
+                padding:0;
+                margin:0;
+            }
+            .square{
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                border: 1px solid black;
+                font-size: 30px;
+                margin-right: -1px;
+                margin-bottom: -1px;
+            }
+            .square:focus{
+                outline: none;
+            }
+            .game{
+                display: flex;
+            }
+            ol{
+                list-style: none;
+            }
+            .gameInf{
+                margin-left: 20px;
+            }
+            #app{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+            }
+        </style>
+		<script src="react.development.js" type="text/javascript" charset="utf-8"></script>
+		<script src="react-dom.development.js" type="text/javascript" charset="utf-8"></script>
+		<script src="babel.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			
+		</div>
+	</body>
+	<script type="text/babel">
+    
+        function Square(props) {
+            return (
+                <button className='square' onClick={()=>alert(props.value)}>
+                    {props.value}    
+                </button>
+            )
+        }
+
+        class Board extends React.Component{
+
+            render() {
+                //console.log(Array(9).fill(null))
+                let squaresAll = [];
+                for(let rows = 0;rows < 3;rows++) {
+                    let squareRow = []
+                    for(let cols = 0;cols < 3;cols++) {
+                        squareRow.push(<Square key={cols} value="X" />)
+                    }
+                    squaresAll.push(<div key={rows}>
+                        {squareRow}
+                    </div>)
+                }
+                return (
+                    <div>
+                        <div>Next Player: X</div>
+                        <div>{squaresAll}</div>
+                    </div>
+                )
+            }
+        }
+
+        class Game extends React.Component{
+            render() {
+                return (
+                    <div className='game'>
+                        <Board />
+                        <div className='gameInf'>
+                            <ol>
+                                <li>step:1</li>  
+                                <li>step:2</li>    
+                                <li>step:3</li>      
+                            </ol>    
+                        </div>    
+                    </div>
+                )
+            }
+        }
+
+        ReactDOM.render(
+            <Game />,
+            document.getElementById("app")
+        )
+	</script>
+</html>
