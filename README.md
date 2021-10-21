@@ -11,6 +11,12 @@
 #### React项目构建方法，引入包(本地包或CDN链接)和使用脚手架构建方式
 ##### 如果你通过 CDN 的方式引入 React，我们建议你设置 crossorigin
 ##### 使用npx create-react-app 创建React 项目
+1.sudo npm install -g create-react-app 安装脚手架
+2.create-react-app -V 查看脚手架的版本
+3.npx create-react-app my-app /create-react-app  my-app 创建项目
+4.npm start 启动项目
+5.react-scripts 的每个命令 start build test eject
+6.strictMode:严格模式
 #### JSX语法
 #### 元素渲染，React元素是不可变的对象，更新UI的唯一方式是创建一个新的UI,然后render，但是我们只需要更改数据，这就是状态组件的出现
 #### 组件&props，组件类似于js的函数
@@ -86,17 +92,31 @@ this.setState({
 5.限制单个元素：PropTypes.element 来确保传递给组件的 children 中只包含一个元素。
 6.默认prop值：defaultProps 属性来定义 props 的默认值
 7.函数中使用时，需要先声明函数组件，再导出组件
-#### p30-p35 60分钟
-1.
-#### p36-p40 60分钟
-1.
-### p41-p60 350分钟
-### p61-p80 350分钟
+#### Fragments
+1.解决一个组件返回多个元素的问题，eg:多个td
+  写法一：显式语法：<React.Fragment></React.Fragment>可以有key值，是唯一的属性
+  写法二：简短语法，像空标签 <></>
+#### Refs and the DOM
+#### Ref与class组件
+#### 非受控组件
+#### context
+#### 深入jsx
+#### 跨组件通信
 
-#### redux语法
+#### ref转发
+#### 高阶组件
+#### render_props
+#### portals
+#### antD
+#### axios
+
+#### redux
+#### reducer
+#### store
+#### toodlist实现
+#### hook
+
 #### 生命周期: 构造函数，render, mount, unmount
 1.mount: 挂载，组件第一次渲染到DOM中时，componentDidMount
 2.unmount: 卸载，从DOM中删除组件时，componentWillUnmount
 3.
-#### 常用组件
-#### HOOK的使用
