@@ -96,9 +96,24 @@ this.setState({
 1.解决一个组件返回多个元素的问题，eg:多个td
   写法一：显式语法：<React.Fragment></React.Fragment>可以有key值，是唯一的属性
   写法二：简短语法，像空标签 <></>
-#### Refs and the DOM
-#### Ref与class组件
+#### Refs and the DOM，class组件
+1.props是父子组件交互的唯一方式；
+2.需要修改组件实例或DOM元素时需要用到Refs
+3.使用场景：
+  （1）管理焦点，文本选择或媒体播放
+  （2）触发强制动画
+  （3）集成第三方DOM库
+4.勿过度使用refs
+5.创建Refs： this.myRef = React.createRef() <div ref={this.myRef} />
+6.访问Refs: const node = this.myRef.current
+7.ref的值根据节点的类型而有所不同：
+  （1）ref属性为HTML元素，底层DOM就是current属性
+  （2）ref属性为自定义class组件时，ref对象接收组件的挂载实例为其current属性
+  （3）不能在引用函数组件上使用ref属性（可以使用forwardRef或者转化成class组件），但是可以在函数组件内部使用ref属性
+8.将DOM Refs暴露给父组件，使用ref转发：Ref 转发使组件可以像暴露自己的 ref 一样暴露子组件的 ref
+9.回调Refs：ref属性等于一个回调函数，ref直接接收element元素
 #### 非受控组件
+1.
 #### context
 #### 深入jsx
 #### 跨组件通信
