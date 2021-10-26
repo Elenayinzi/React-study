@@ -10,7 +10,8 @@
 ## 核心概念
 ### React项目构建方法，引入包(本地包或CDN链接)和使用脚手架构建方式
 * 如果你通过 CDN 的方式引入 React，我们建议你设置 crossorigin
-* 使用npx create-react-app 创建React 项目:
+* 使用npx create-react-app 创建React 项目:  
+
     1.sudo npm install -g create-react-app 安装脚手架  
 
     2.create-react-app -V 查看脚手架的版本  
