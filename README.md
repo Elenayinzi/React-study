@@ -23,8 +23,10 @@
 
 6.strictMode:严格模式  
 
-#### 元素渲染，React元素是不可变的对象，更新UI的唯一方式是创建一个新的UI,然后render，但是我们只需要更改数据，这就是状态组件的出现
-#### 组件&props，组件类似于js的函数
+### 元素渲染，React元素是不可变的对象，更新UI的唯一方式是创建一个新的UI,然后render，但是我们只需要更改数据，这就是状态组件的出现  
+
+### 组件&props，组件类似于js的函数  
+
 1.props是入参，只读性，不能修改自身的props
 2.函数组件，function Test(props){retrun <h1></h1>},类似构造函数
 3.class组件, class Welcome extends React.Component { 
@@ -35,14 +37,14 @@
 4.组件名称必须以大写字母开头，小写字母开头的会被当作原生DOM标签，分为有状态组件和无状态组件
 5.纯函数，不改变入参的值，只使用参数，所有React组件都要像纯函数一样保护props的值不被更改
 6.组合组件：嵌入式组件
-#### state用法
+### state用法
 1.state是私有的，受控于当前组件
 2.不要直接修改state:this.state.comment="",此代码不会更新UI,使用setState,只有构造函数使用this.state={}
 3.state的更新可能是异步的，setState()接受一个函数而不是对象来解决这个问题，看文档写法
 4.state的更新会被合并
 5.数据是像下流动的，作为参数传递给自组件
 6.组件的更新依赖于state或者props的值的更改
-#### 事件处理
+### 事件处理
 1.采用小驼峰式命名事件
 2.使用JSX语法时需要传入一个函数作为事件处理函数，而不是一个字符串
 3.React不能通过 return false阻止默认行为，只能使用preventDefault()
@@ -51,18 +53,18 @@
 public class fields: test = () => {} or 1.绑定了this;2.书写少了，不用在构造函数中bind；3.自动绑定，不用多次创建函数；
 箭头函数：()=>this.test();会出现重复创建函数的问题
 5.向事件处理程序传递参数
-#### 条件渲染
+### 条件渲染
 1.元素变量
 2.与运算符&&：{arr.length >0 && <div>aa</div>}在 JavaScript 中，true && expression 总是会返回 expression, 而 false && expression 总是会返回false表达式，跳过expression
 3.三目运算符：{isLoggedIn ? 'currently' : 'not'}
 4.阻止组件渲染，返回null
-#### 列表&key
+### 列表&key
 1.map()渲染多个组件
 2.基础列表组件
 3.列表兄弟元素每个元素添加一个key作为唯一标识，但全局不需要唯一
 4.用key提取组件，元素的 key 只有放在就近的数组上下文中才有意义。
 5.在jsx中嵌入map()
-#### 表单
+### 表单
 1.受控组件:input,textarea,select
 2.非受控组件：文件input标签
 3.处理多个input输入时增加name属性来区分
@@ -71,14 +73,14 @@ this.setState({
 });
 4.受控组件输入空值的情况
 5.什么是Formik：是由React组件和hooks组成，它内置了表单的state管理操作，无需我们在单独为表单建立state，同时使用了Context，能够让表单组件多层嵌套，不再需要我们一层层传递
-#### 状态提升
+### 状态提升
 1.将多个组件中需要共享的 state 向上移动到它们的最近共同父组件中，便可实现共享 state，避免跨组建共享数据，通过props传递参和方法
-#### 组合和继承  *****（）
+### 组合和继承  *****（）
 1.包含关系：props.children
 2.特例关系
 3.组件可以接受任意格式的props
 4.React中没有使用到继承，通过组合来实现代码的复用，也没有slot的概念
-#### React哲学
+### React哲学
 1.将设计好的UI划分为组件层级
 2.按照单一功能原则来划分组件
 3.组件结构和数据模型一一对应
