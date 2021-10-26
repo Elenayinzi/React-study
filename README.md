@@ -8,9 +8,9 @@
 本文是React 入门学习，通过本篇文章你可以学习到以下内容
 ---------
 ## 核心概念
-#### React项目构建方法，引入包(本地包或CDN链接)和使用脚手架构建方式
-##### 如果你通过 CDN 的方式引入 React，我们建议你设置 crossorigin
-##### 使用npx create-react-app 创建React 项目
+### React项目构建方法，引入包(本地包或CDN链接)和使用脚手架构建方式
+ #### 如果你通过 CDN 的方式引入 React，我们建议你设置 crossorigin
+ #### 使用npx create-react-app 创建React 项目
 1.sudo npm install -g create-react-app 安装脚手架
 2.create-react-app -V 查看脚手架的版本
 3.npx create-react-app my-app /create-react-app  my-app 创建项目
@@ -47,7 +47,7 @@ public class fields: test = () => {} or 1.绑定了this;2.书写少了，不用�
 5.向事件处理程序传递参数
 #### 条件渲染
 1.元素变量
-2.与运算符&&：{arr.length >0 && <h1>aa</h1>}在 JavaScript 中，true && expression 总是会返回 expression, 而 false && expression 总是会返回false表达式，跳过expression
+2.与运算符&&：{arr.length >0 && <div>aa</div>}在 JavaScript 中，true && expression 总是会返回 expression, 而 false && expression 总是会返回false表达式，跳过expression
 3.三目运算符：{isLoggedIn ? 'currently' : 'not'}
 4.阻止组件渲染，返回null
 #### 列表&key
@@ -148,7 +148,7 @@ this.setState({
 2.props
 3.consumer消费context
 #### ref转发
-1.
+1.Ref 转发是一个可选特性，其允许某些组件接收 ref，并将其向下传递（换句话说，“转发”它）给子组件。
 #### 高阶组件
 #### render_props
 #### portals
