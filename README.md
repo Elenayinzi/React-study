@@ -113,7 +113,7 @@
     嵌套，不再需要我们一层层传递
 ### 状态提升
     1.将多个组件中需要共享的 state 向上移动到它们的最近共同父组件中，便可实现共享 state，避免跨组建共享数据，通过props传递参和方法
-### 组合和继承  *****（）
+### 组合和继承
     1.包含关系：props.children
 
     2.特例关系
@@ -254,16 +254,19 @@
 ### ref转发
     1.Ref 转发是一个可选特性，其允许某些组件接收 ref，并将其向下传递（换句话说，“转发”它）给子组件。
 ### 高阶组件
+
 ### render_props
 ### portals
 ### antD
+
 ### axios
 ### redux
 ### reducer
+
 ### store
 ### toodlist实现
 ### hook
+
 ### 生命周期: 构造函数，render, mount, unmount
     1.mount: 挂载，组件第一次渲染到DOM中时，componentDidMount
-    
     2.unmount: 卸载，从DOM中删除组件时，componentWillUnmount

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import './App.css';
 import React, { Component } from 'react';
-import Index from './02-使用context跨组件通信/Index.js'
+import Index from './03-ref转发/Index.js'
 // import PropsTest from './PropsTest.js';
 // import ContextTest from './ContextTest.js';
 
