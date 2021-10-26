@@ -134,10 +134,21 @@ this.setState({
   （3）字符串字面量，"字符串"，{"字符串"}，{123}
   （4）props属性不传值时默认值是true，不建议不传，会和ES6混淆
   （5）属性展开,展开运算符...：{...props},{kind,...other} = props;...other是除kind外其他剩余属性
-  （6）
+  （6）JSX的子元素，包含在开始标签和结束标签之间的内容，将作为特定的属性props.children传递给外层组件
+  （7）子元素的种类有：
+        a.字符串字面量
+        b.多个JSX元素，嵌套组件
+        c.字符串字面量与 JSX 子元素一起使用
+        d.React 组件也能够返回存储在数组中的一组元素
+        e.js表达式{}
+        f.函数
+        g.false, null, undefined, and true 是合法的子元素。但它们并不会被渲染,如果你想渲染 false、true、null、undefined 等值，你需要先将它们转换为字符串String(str)
 #### 跨组件通信
-
+1.context,provider
+2.props
+3.consumer消费context
 #### ref转发
+1.
 #### 高阶组件
 #### render_props
 #### portals
