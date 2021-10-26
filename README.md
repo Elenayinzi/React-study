@@ -8,20 +8,20 @@
 本文是React 入门学习，通过本篇文章你可以学习到以下内容
 ---------
 ## 核心概念
-### React项目构建方法，引入包(本地包或CDN链接)和使用脚手架构建方式
+### * React项目构建方法，引入包(本地包或CDN链接)和使用脚手架构建方式
 ##### 如果你通过 CDN 的方式引入 React，我们建议你设置 crossorigin
-##### 使用npx create-react-app 创建React 项目
+##### 使用npx create-react-app 创建React 项目:
     1.sudo npm install -g create-react-app 安装脚手架  
 
-2.create-react-app -V 查看脚手架的版本  
+    2.create-react-app -V 查看脚手架的版本  
 
-3.npx create-react-app my-app /create-react-app  my-app 创建项目  
+    3.npx create-react-app my-app /create-react-app  my-app 创建项目  
 
-4.npm start 启动项目  
+    4.npm start 启动项目  
 
-5.react-scripts 的每个命令 start build test eject  
+    5.react-scripts 的每个命令 start build test eject  
 
-6.strictMode:严格模式  
+    6.strictMode:严格模式  
 
 ### 元素渲染，React元素是不可变的对象，更新UI的唯一方式是创建一个新的UI,然后render，但是我们只需要更改数据，这就是状态组件的出现  
 
