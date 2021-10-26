@@ -12,11 +12,17 @@
 ##### 如果你通过 CDN 的方式引入 React，我们建议你设置 crossorigin
 ##### 使用npx create-react-app 创建React 项目
 1.sudo npm install -g create-react-app 安装脚手架  
+
 2.create-react-app -V 查看脚手架的版本  
+
 3.npx create-react-app my-app /create-react-app  my-app 创建项目  
+
 4.npm start 启动项目  
+
 5.react-scripts 的每个命令 start build test eject  
+
 6.strictMode:严格模式  
+
 #### 元素渲染，React元素是不可变的对象，更新UI的唯一方式是创建一个新的UI,然后render，但是我们只需要更改数据，这就是状态组件的出现
 #### 组件&props，组件类似于js的函数
 1.props是入参，只读性，不能修改自身的props
