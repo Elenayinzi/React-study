@@ -1,9 +1,30 @@
 import PropTypes from 'prop-types';
 import './App.css';
 import React, { Component } from 'react';
-import Index from './03-ref转发/Index.js'
+import Index from './08-高阶组件进行生命周期劫持/Index.js'
 // import PropsTest from './PropsTest.js';
 // import ContextTest from './ContextTest.js';
+
+localStorage.setItem('username','elena11')
+// function welcome(username){
+//   console.log('welcome' + username)
+// }
+// function thank(username){
+//   console.log('thank you' + username)
+// }
+// function wrapFunUsername(wrapedFun) {
+//     let newFun = ()=>{
+//       let username = localStorage.getItem('username')
+//       wrapedFun(username)
+//     }
+//     return newFun
+// }
+
+// welcome = wrapFunUsername(welcome)
+// thank = wrapFunUsername(thank)
+
+// welcome();
+// thank();
 
 class App extends Component {
   render() {
