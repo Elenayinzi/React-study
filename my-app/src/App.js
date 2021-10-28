@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import './App.css';
 import React, { Component } from 'react';
-import Index from './08-高阶组件进行生命周期劫持/Index.js'
+import Index from './11-axios/Index.js'
 // import PropsTest from './PropsTest.js';
 // import ContextTest from './ContextTest.js';
 

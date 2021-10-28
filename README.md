@@ -265,14 +265,20 @@
     5.解决横切关注点问题
 
 ### render_props
-### portals
-### antD
-### axios
-### redux
-### reducer
+    1.render prop 是指一种在React组件之间使用一个值为函数的prop共享代码的技术
 
+    2.使用 Render Props 来解决横切关注点
+
+    3.任何被用于告知组件需要渲染什么内容的函数 prop 在技术上都可以被称为 “render prop”.不一定要用名为 render 的 prop 来使用这种模式
+### portals
+    1.Portal 提供了一种将子节点渲染到存在于父组件以外的 DOM 节点的优秀的方案。
+
+    2.ReactDOM.createPortal(child, container)
+### redux  https://www.redux.org.cn/
+    1.
+### reducer
 ### store
-### toodlist实现
+
 ### hook
 
 ### 生命周期: 构造函数，render, mount, unmount
