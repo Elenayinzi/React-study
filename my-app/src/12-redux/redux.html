@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <meta charset="uft-8"/>
+        <title>redux</title>
+    </head>
+    <body>
+        
+    </body>
+    <script type="text/javascript">
+        let state = {
+            todos: [{
+                text: 'eat food',
+                completed: true
+            }],
+            visFilter: 'SHOW_ALL'
+        }  
+        let action1 = {type:'ADD_Todo',text:'study'}
+        let action2 = {type:'SET_visFilter',text:'SHOW_Completed'}
+        function visFilter(state='SHOW_ALL',action) {
+            if(action.type === 'SET_visFilter') {
+                return action.text
+            }
+            return state;
+        }
+        state.visFilter =  visFilter(state.visFilter,action2)
+        function toDos(state =[], action) {
+            if(action.type === 'ADD_Todo') {
+                return state.concat({
+                    text: action.text,completed: false
+                })
+            }
+            return false
+        }
+        state.todos = toDos(state.todos,action1)
+        function todosApp(state = {}, action) {
+            return {
+                todos: toDos(state.todos,action),
+                visFilter: visFilter(state.visFilter,action)
+            }
+        }
+        let action3 = {type:'ADD_Todo',text:'swimming'}
+        state = todosApp(state,action3)
+        console.log(state)
+    </script>
+</html>

@@ -274,11 +274,37 @@
     1.Portal 提供了一种将子节点渲染到存在于父组件以外的 DOM 节点的优秀的方案。
 
     2.ReactDOM.createPortal(child, container)
-### redux  https://www.redux.org.cn/
-    1.
-### reducer
-### store
+### redux, reducer, store  https://www.redux.org.cn/ 
+    1.redux是一个js状态容器，提供可预测化的状态管理，action+reducer+store
 
+    2.三大原则：
+
+        a.单一数据源，整个应用的state被存储在唯一一个store中
+         
+        b.state是只读的，唯一改变state的方法是触发action,action是一个用于描述已发生事件的普通对象
+
+        c.使用纯函数（reducers）来执行修改
+    3.核心概念，state(Model)，action(描述动作)，reducer连接action和state的函数，接收state和action返回新的state的函数
+
+    4.action:把数据从应用传到store的有效载荷，是store数据的唯一来源，store.dispatch()将action传到store
+
+    5.action创建函数：action是一个对象，action创建函数是创建一个返回action对象的函数
+
+    6.reducer指定了应用状态的变化如何响应action并发送到store的，reducer连接action和state的纯函数，接收state和action返回新的state的函数
+
+    7.不要在reducer中执行以下操作:a.不要修改传入的参数；b.不要执行有副作用的操作；c.不要调用非纯函数；
+
+    8.store把action,reducer，state联系到一起了
+
+        a.维持应用的state
+
+        b.提供getState() 方法获取state
+
+        c.提供dispatch(action)方法更新state
+
+        d.通过subscribe(listener)注册监听器
+
+        f.通过subscribe(listener)返回的函数注销监听器
 ### hook
 
 ### 生命周期: 构造函数，render, mount, unmount
