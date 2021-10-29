@@ -306,6 +306,7 @@
 
         f.通过subscribe(listener)返回的函数注销监听器
 ### hook
+    1.
 
 ### 生命周期: 构造函数，render, mount, unmount
     1.mount: 挂载，组件第一次渲染到DOM中时，componentDidMount
