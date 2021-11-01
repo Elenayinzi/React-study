@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import './App.css';
 import React, { Component } from 'react';
-import Index from './13-reducer/Index.js'
+import Index from './14-hook/Index.js'
 // import PropsTest from './PropsTest.js';
 // import ContextTest from './ContextTest.js';
 

@@ -305,8 +305,18 @@
         d.通过subscribe(listener)注册监听器
 
         f.通过subscribe(listener)返回的函数注销监听器
-### hook
-    1.
+### hook， React16.8新增特性
+    1.可以在不编写class的情况下使用state以及其他的React特性，hook只能在函数组件中使用
+
+    2.state hook变量：const [count,setCount] = useState(0),变量和方法配套使用
+
+    3.Effect Hook副作用能力：useEffect类似生命周期函数，相当于componentDidMount 和 componentDidUpdate
+
+    4.只能在函数的最外层调用，不要在循环条件判断或者子函数中调用
+
+    5.只能在React的函数组件中调用，不要在其他的js函数中调用，但自定义的hook中可以调用hook
+
+    6.自定义 Hook 是一个函数，其名称以 “use” 开头，函数内部可以调用其他的 Hook
 
 ### 生命周期: 构造函数，render, mount, unmount
     1.mount: 挂载，组件第一次渲染到DOM中时，componentDidMount
